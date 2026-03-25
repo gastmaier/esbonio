@@ -28,7 +28,6 @@ dependencies = [
     "aiosqlite",
     "platformdirs",
     "docutils",
-    "sphinx",
     "pygls>=2.0",
     "tomli ; python_version<'3.11'",
     "websockets",
