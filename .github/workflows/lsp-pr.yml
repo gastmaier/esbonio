@@ -70,7 +70,8 @@ jobs:
       name: Setup Environment
 
     - run: |
+        [[ "${{ runner.debug }}" == "1" ]] && debug="-xsv"
         cd lib/esbonio
 
-        hatch test -c -i py=${{ matrix.python-version }}
+        hatch test -c -i py=${{ matrix.python-version }} -- ${debug:-}
       name: Run Tests
